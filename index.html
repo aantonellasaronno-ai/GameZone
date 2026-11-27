@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="GameZone, tienda gamer online de videojuegos, consolas y accesorios.">
+<title>GameZone | Tienda Gamer</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#inicio"><span class="logo">🎮</span><span>GAME<span class="red">ZONE</span><small>TIENDA GAMER ONLINE</small></span></a>
+<nav><a href="#inicio">Inicio</a><a href="#productos">Productos</a><a href="#productos" id="navCategories">Categorías</a><a href="#ofertas">Ofertas</a><a href="#contacto">Contacto</a></nav>
+<div class="head-actions"><button id="themeBtn" title="Modo oscuro/claro">🌙</button><button id="favToggle" title="Favoritos">♡ <span id="favCount">0</span></button><button id="cartToggle" title="Carrito">🛒 <span id="cartCount">0</span></button></div>
+</header>
+<main id="inicio"><section class="hero"><div class="hero-copy"><p class="eyebrow">LEVEL UP YOUR GAME</p><h1>LOS MEJORES<br><span>JUEGOS</span><br>EN UN SOLO LUGAR</h1><p>Juegos, consolas y accesorios gamer con las mejores ofertas.</p><a class="btn" href="#productos">Ver productos ↗</a></div><img src="assets/hero.png" alt="Gaming setup" class="hero-art"></section>
+<section class="benefits"><div>🚚 <span>Envíos a todo el país</span></div><div>💳 <span>Pagá como quieras</span></div><div>🛡️ <span>Compra simulada segura</span></div><div>🎮 <span>Todo para gamers</span></div><div>💬 <span>Soporte online</span></div></section>
+<section id="productos" class="shop"><aside class="filters"><h3>⌕ Categorías</h3><button class="category active" data-category="Todos">🎮 Todos los productos</button><button class="category" data-category="Videojuegos">🕹️ Videojuegos</button><button class="category" data-category="Consolas">🎛️ Consolas</button><button class="category" data-category="Accesorios">🎧 Accesorios</button><button class="category" data-category="Merch">🎁 Merch</button><h3>Filtrar por precio</h3><label for="priceRange">Hasta: <strong id="priceLabel">$400.000</strong></label><input id="priceRange" type="range" min="20000" max="400000" step="10000" value="400000"><button id="clearFilters" class="outline">Limpiar filtros</button></aside>
+<div class="catalog"><div class="catalog-head"><div><h2>🔥 Productos destacados</h2><p id="resultsLabel">Los favoritos de la comunidad</p></div><div class="search-sort"><input id="search" type="search" placeholder="Buscar juegos, consolas o accesorios…"><select id="sort"><option value="popular">Más vendidos</option><option value="low">Precio: menor a mayor</option><option value="high">Precio: mayor a menor</option><option value="name">Nombre A-Z</option></select></div></div><div id="productGrid" class="product-grid"></div></div></section>
+<section id="ofertas" class="offer"><h2>⚡ Oferta gamer de la semana</h2><p>Encontrá tu próxima aventura. Ofertas ficticias para este proyecto escolar.</p><a href="#productos" class="btn">Explorar tienda</a></section>
+<section id="contacto" class="contact"><h2>Contacto</h2><p>¿Tenés alguna consulta? Dejanos tu mensaje.</p><form id="contactForm"><input required placeholder="Tu nombre"><input type="email" required placeholder="Tu correo"><textarea required placeholder="Mensaje"></textarea><button class="btn">Enviar mensaje</button></form><p id="contactMessage" class="notice"></p></section></main>
+<footer><span>© 2026 GameZone · Proyecto escolar</span><span>Hecho con HTML, CSS y JavaScript</span></footer>
+<div class="cart-overlay" id="cartOverlay"><aside class="cart-panel"><button class="close" id="closeCart">✕</button><h2>🛒 Tu carrito</h2><div id="cartItems"></div><div class="cart-total">Total: <strong id="cartTotal">$0</strong></div><button id="checkout" class="btn full">Finalizar compra</button><button id="emptyCart" class="outline full">Vaciar carrito</button><p id="cartNotice" class="notice"></p></aside></div>
+<div id="toast" class="toast"></div><script src="script.js"></script>
+</body></html>
